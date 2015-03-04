@@ -57,7 +57,6 @@ namespace Grabacr07.KanColleViewer.Models
 				EnableLogging = false,
 				EnableTranslations = true,
 				EnableAddUntranslated = true,
-				EnableCriticalNotify = true,
 				EnableCriticalAccent = true,
 				EnableUpdateNotification = true,
 				EnableUpdateTransOnStart = true,
@@ -455,25 +454,6 @@ namespace Grabacr07.KanColleViewer.Models
 				}
 			}
 		}
-		#endregion
-
-		#region EnableCriticalNotify 変更通知プロパティ
-
-		private bool _EnableCriticalNotify;
-
-		public bool EnableCriticalNotify
-		{
-			get { return this._EnableCriticalNotify; }
-			set
-			{
-				if (this._EnableCriticalNotify != value)
-				{
-					this._EnableCriticalNotify = value;
-					this.RaisePropertyChanged();
-				}
-			}
-		}
-
 		#endregion
 
 		#region EnableCriticalAccent 変更通知プロパティ

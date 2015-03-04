@@ -126,23 +126,6 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents.Fleets
 				{ () => fleet.Ships, (sender, args) => this.RaisePropertyChanged("Planes") },
 			});
 
-			this.CompositeDisposable.Add(new PropertyChangedEventListener(fleet)
-			{
-				{
-					"IsWounded", (sender, args) => 
-					{
-						var source = (Fleet)sender;
-						if (source.IsWounded && Settings.Current.EnableCriticalNotify)
-						{
-							PluginHost.Instance.GetNotifier().Show(NotifyType.Wounded,
-								Resources.Notifications_CriticalCondition_Title,
-								string.Format(Resources.Notifications_CriticalCondition, source.Name),
-								() => App.ViewModelRoot.Activate());
-						}
-					}
-				}
-			});
-
 			this.Sortie = new SortieViewModel(fleet);
 			this.CompositeDisposable.Add(this.Sortie);
 

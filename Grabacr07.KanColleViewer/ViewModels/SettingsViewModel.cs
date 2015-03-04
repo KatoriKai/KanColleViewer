@@ -243,23 +243,6 @@ namespace Grabacr07.KanColleViewer.ViewModels
 
 		#endregion
 
-        #region EnableCriticalNotify 変更通知プロパティ
-
-        public bool EnableCriticalNotify
-        {
-            get { return Settings.Current.EnableCriticalNotify; }
-            set
-            {
-                if (Settings.Current.EnableCriticalNotify != value)
-                {
-                    Settings.Current.EnableCriticalNotify = value;
-                    this.RaisePropertyChanged();
-                }
-            }
-        }
-
-        #endregion
-
         #region EnableCriticalAccent 変更通知プロパティ
 
         public bool EnableCriticalAccent
