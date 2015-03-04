@@ -127,7 +127,7 @@
 					</ListView.Resources>
 					<ListView.View>
 						<GridView>
-							<GridViewColumn Width="180">
+							<GridViewColumn Width="185">
 								<GridViewColumn.Header>
 									<TextBlock Text="{Binding Resources.SlotItemCatalog_EqipName, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
 								</GridViewColumn.Header>
@@ -142,10 +142,10 @@
 											<TextBlock Margin="0,4">
 												<Run Text="{Binding SlotItem.Name, Mode=OneWay}"
 													 Foreground="{DynamicResource ActiveForegroundBrushKey}" />
-												<LineBreak />
+												<!--<LineBreak />
 												<Run Text="{Binding SlotItem.UntranslatedName, Mode=OneWay}"
 													 Background="{DynamicResource BackgroundBrushKey}"
-													 FontSize="11" />
+													 FontSize="11" />-->
 											</TextBlock>
 										</StackPanel>
 									</DataTemplate>
@@ -172,7 +172,7 @@
 								</GridViewColumn.CellTemplate>
 							</GridViewColumn>
 
-							<GridViewColumn Width="100">
+							<GridViewColumn Width="78">
 								<GridViewColumn.Header>
 									<TextBlock>
 										<Run Text="{Binding Resources.SlotItemCatalog_Stats, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />

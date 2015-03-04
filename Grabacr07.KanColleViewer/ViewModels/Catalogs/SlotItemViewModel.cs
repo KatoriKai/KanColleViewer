@@ -40,11 +40,9 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 				get
 				{
 					string AddDetail = "";
-					if (this.Ship.Info.UntranslatedName != "")
-						AddDetail += this.Ship.Info.UntranslatedName + "\n";
 
 					foreach (ShipSlot s in this.Ship.EquippedSlots) {
-						AddDetail += String.Format("{0}{1}\n", s.Item.Info.Name, s.Item.Level > 0 ? " +" + s.Item.Level : "");
+                        AddDetail += String.Format("{0}{1}\n", s.Item.Info.Name, s.Item.Level > 0 ? " ★+" + s.Item.Level : "");
 					}
 
 					return AddDetail.TrimEnd('\n');
@@ -101,39 +99,33 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 			}
 		}
 
+        private string SignedStr(int Value)
+        {
+            return Value.ToString("+#;-#;#");
+        }
+
 		public string Detail
 		{
 			get
 			{
-				List<string> details = new List<string>();
+                string AddDetail = "";
 
-				if (this.SlotItem.Firepower != 0) details.Add(StatFormat(SlotItem.Firepower, Resources.Stats_Firepower));
-				if (this.SlotItem.AA != 0) details.Add(StatFormat(SlotItem.AA, Resources.Stats_AntiAir));
-				if (this.SlotItem.Torpedo != 0) details.Add(StatFormat(SlotItem.Torpedo, Resources.Stats_Torpedo));
-				if (this.SlotItem.AntiSub != 0) details.Add(StatFormat(SlotItem.AntiSub, Resources.Stats_AntiSub));
-				if (this.SlotItem.SightRange != 0) details.Add(StatFormat(SlotItem.SightRange, Resources.Stats_SightRange));
-				if (this.SlotItem.Speed != 0) details.Add(StatFormat(SlotItem.Speed, Resources.Stats_Speed));
-				if (this.SlotItem.Armor != 0) details.Add(StatFormat(SlotItem.Armor, Resources.Stats_Armor));
-				if (this.SlotItem.Health != 0) details.Add(StatFormat(SlotItem.Health, Resources.Stats_Health));
-				if (this.SlotItem.Luck != 0) details.Add(StatFormat(SlotItem.Luck, Resources.Stats_Luck));
-				if (this.SlotItem.Evasion != 0) details.Add(StatFormat(SlotItem.Evasion, Resources.Stats_Evasion));
-				if (this.SlotItem.Accuracy != 0) details.Add(StatFormat(SlotItem.Accuracy, Resources.Stats_Accuracy));
-				if (this.SlotItem.DiveBomb != 0) details.Add(StatFormat(SlotItem.DiveBomb, Resources.Stats_DiveBomb));
-				if (this.SlotItem.AttackRange > 0) details.Add(String.Format(" {1}({0})", this.SlotItem.AttackRange, Resources.Stats_AttackRange));
-				//if (this.SlotItem.RawData.api_raik > 0) AddDetail += (AddDetail != "" ? "\n" : "") + " +" + this.SlotItem.RawData.api_raik + " api_raik";
-				//if (this.SlotItem.RawData.api_raim > 0) AddDetail += (AddDetail != "" ? "\n" : "") + " +" + this.SlotItem.RawData.api_raim + " api_raim";
-				//if (this.SlotItem.RawData.api_sakb > 0) AddDetail += (AddDetail != "" ? "\n" : "") + " +" + this.SlotItem.RawData.api_sakb + " api_sakb";
-				//if (this.SlotItem.RawData.api_atap > 0) AddDetail += (AddDetail != "" ? "\n" : "") + " +" + this.SlotItem.RawData.api_atap + " api_atap";
-				//if (this.SlotItem.RawData.api_rare > 0) AddDetail += (AddDetail != "" ? "\n" : "") + " +" + this.SlotItem.RawData.api_rare + " api_rare";
-				//if (this.SlotItem.RawData.api_bakk > 0) AddDetail += (AddDetail != "" ? "\n" : "") + " +" + this.SlotItem.RawData.api_bakk + " api_bakk";
+				if (this.SlotItem.Firepower != 0) AddDetail += Resources.Stats_Firepower + " " + SignedStr(this.SlotItem.Firepower);
+                if (this.SlotItem.AA != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_AntiAir + " " + SignedStr(this.SlotItem.AA);
+                if (this.SlotItem.Torpedo != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_Torpedo + " " + SignedStr(this.SlotItem.Torpedo);
+                if (this.SlotItem.AntiSub != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_AntiSub + " " + SignedStr(this.SlotItem.AntiSub);
+                if (this.SlotItem.SightRange != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_SightRange + " " + SignedStr(this.SlotItem.SightRange);
+                if (this.SlotItem.Speed != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_Speed + " " + SignedStr(this.SlotItem.Speed);
+                if (this.SlotItem.Armor != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_Armor + " " + SignedStr(this.SlotItem.Armor);
+                if (this.SlotItem.Health != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_Health + " " + SignedStr(this.SlotItem.Health);
+                if (this.SlotItem.Luck != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_Luck + " " + SignedStr(this.SlotItem.Luck);
+                if (this.SlotItem.Accuracy != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_Accuracy + " " + SignedStr(this.SlotItem.Accuracy);
+                if (this.SlotItem.Evasion != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_Evasion + " " + SignedStr(this.SlotItem.Evasion);
+                if (this.SlotItem.DiveBomb != 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_DiveBomb + " " + SignedStr(this.SlotItem.DiveBomb);
+ 				if (this.SlotItem.AttackRange > 0) AddDetail += (AddDetail != "" ? "\n" : "") + Resources.Stats_AttackRange + " (" + this.SlotItem.AttackRange + ")";
 
-				return String.Join("\n", details);
+				return AddDetail;
 			}
-		}
-
-		private string StatFormat(int stat, string name)
-		{
-			return String.Format(" {0:+#;-#} {1}", stat, name);
 		}
 	}
 }
