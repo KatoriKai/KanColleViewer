@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Windows;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Grabacr07.KanColleViewer.Models.Data.Xml;
 using Grabacr07.KanColleWrapper;
-using Grabacr07.KanColleWrapper.Models;
 using Livet;
+using System.Windows;
 
 namespace Grabacr07.KanColleViewer.Models
 {
@@ -27,22 +26,26 @@ namespace Grabacr07.KanColleViewer.Models
 
 		public static Settings Current { get; set; }
 
-		public static void Load()
-		{
-			try
-			{
-                Current = filePath.ReadXml<Settings>();
-				if (Current.SettingsVersion != CurrentSettingsVersion)
-					Current = GetInitialSettings();
-			}
-			catch (Exception ex)
-			{
-				Current = GetInitialSettings();
-				System.Diagnostics.Debug.WriteLine(ex);
-			}
-		}
+        public delegate void EventHandler();
+        public event EventHandler VerticalWindow;
+        public event EventHandler HorizontalWindow;
 
-		public static Settings GetInitialSettings()
+        public static void Load()
+        {
+            try
+            {
+                Current = filePath.ReadXml<Settings>();
+                if (Current.SettingsVersion != CurrentSettingsVersion)
+                    Current = GetInitialSettings();
+            }
+            catch (Exception ex)
+            {
+                Current = GetInitialSettings();
+                System.Diagnostics.Debug.WriteLine(ex);
+            }
+        }
+
+        public static Settings GetInitialSettings()
 		{
 			return new Settings
 			{
@@ -74,8 +77,8 @@ namespace Grabacr07.KanColleViewer.Models
 				KanColleClientSettings = new KanColleClientSettings(),
                 OrientationMode = OrientationType.Auto,
 				MenuIcon = false,
-				HorizontalSize = new Point(1280,0),
-				VerticalSize = new Point(0,1000),
+                HorizontalSize = new Point(1280, 0),
+                VerticalSize = new Point(0, 1000),
 			};
 		}
 
@@ -957,6 +960,9 @@ namespace Grabacr07.KanColleViewer.Models
                 if (this._Orientation != value)
                 {
                     this._Orientation = value;
+                    if (this._Orientation == OrientationType.Vertical)
+                        this.VerticalWindow();
+                    else this.HorizontalWindow();
                     this.RaisePropertyChanged();
                 }
             }

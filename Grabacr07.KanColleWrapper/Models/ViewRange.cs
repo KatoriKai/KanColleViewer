@@ -139,7 +139,7 @@ namespace Grabacr07.KanColleWrapper.Models
 
 		public override string Name
 		{
-			get { return "Formula 2-5 (new)"; }
+            get { return "2-5 式 (秋)"; }
 		}
 
 		public override string Description
