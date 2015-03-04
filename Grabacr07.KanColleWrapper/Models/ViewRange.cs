@@ -70,12 +70,12 @@ namespace Grabacr07.KanColleWrapper.Models
 
 		public override string Name
 		{
-			get { return "Simple"; }
+            get { return "単純計算"; }
 		}
 
 		public override string Description
 		{
-			get { return "Simple sum of ship and equipment LoS"; }
+            get { return "艦娘と装備の索敵値の単純な合計値"; }
 		}
 
 		public override double Calc(Fleet fleet)
@@ -96,13 +96,12 @@ namespace Grabacr07.KanColleWrapper.Models
 
 		public override string Name
 		{
-			get { return "Formula 2-5 (old)"; }
+            get { return "2-5 式 (旧)"; }
 		}
 
 		public override string Description
 		{
-			get { return @"(Recon planes × 2) + (Radar) + √(Total LoS with equip LoS included - 
-Recon planes - Radar)"; }
+            get { return "(偵察機 × 2) + (電探) + √(装備込みの艦隊索敵値合計 - 偵察機 - 電探)"; }
 		}
 
 		public override double Calc(Fleet fleet)
@@ -147,10 +146,10 @@ Recon planes - Radar)"; }
 		{
 			get
 			{
-				return @"Dive Bomber LoS x (1.04) + Torpedo Bomber LoS x (1.37) + 
-Carrier-based Recon Plane LoS x (1.66) + Recon Seaplane LoS x (2.00) + Seaplane Bomber LoS x (1.78) + 
-Small Radar LoS x (1.00) + Large Radar LoS x (0.99) + Searchlight LoS x (0.91) + √(base LoS of each ship) x 
-(1.69) + (HQ Lv. rounded up to the next multiple of 5) x (-0.61)";
+                return @"(艦上爆撃機 × 1.04) + (艦上攻撃機 × 1.37) + (艦上偵察機 × 1.66)
++ (水上偵察機 × 2.00) + (水上爆撃機 × 1.78) + (探照灯 × 0.91)
++ (小型電探 × 1.00) + (大型電探 × 0.99) + (√各艦毎の素索敵 × 1.69)
++ (司令部レベルを 5 の倍数に切り上げ × -0.61)";
 			}
 		}
 

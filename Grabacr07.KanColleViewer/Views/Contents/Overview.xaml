@@ -137,9 +137,9 @@
                             </ItemsControl.ItemTemplate>
                         </ListBox>
 
-                        <!--<vContents:StateDetailIndicator DockPanel.Dock="Top"
+                        <vContents:StateDetailIndicator DockPanel.Dock="Top"
 													DataContext="{Binding SelectedFleet}"
-													Margin="0,7,0,3" />-->
+													Margin="0,7,0,3" />
 
 						<ItemsControl ItemsSource="{Binding SelectedFleet.Ships}"
 									  Background="Transparent"
