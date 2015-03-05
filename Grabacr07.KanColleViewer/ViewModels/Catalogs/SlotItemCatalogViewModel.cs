@@ -81,7 +81,8 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 				{
 					foreach (var target in ship.EquippedSlots.Select(slot => dic[slot.Item.Info.Id]))
 					{
-						target.AddShip(ship);
+                        if (ship.Slots.Where(x => x.Equipped).Any(x => x.Item.Level > 0 && x.Item.Info.Id == target.SlotItem.Id)) target.AddShip(ship, true);
+                        else target.AddShip(ship, false);
 					}
 				}
 
