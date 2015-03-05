@@ -44,7 +44,8 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 					string AddDetail = "";
 
 					foreach (ShipSlot s in this.Ship.EquippedSlots) {
-                        AddDetail += String.Format("{0}{1}\n", s.Item.Info.Name, s.Item.Level > 0 ? " ★+" + s.Item.Level : "");
+                        AddDetail += String.Format("{0}{1}\n", s.Item.Info.Name, s.Item.Level  >= 10 ? " max" : s.Item.Level >= 1 ? (" ★+" + s.Item.Level) : "");
+                        //AddDetail += String.Format("{0}{1}\n", s.Item.Info.Name, s.Item.Level > 0 ? " ★+" + s.Item.Level : "");
 					}
 
 					return AddDetail.TrimEnd('\n');
@@ -100,7 +101,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 			get
 			{
 				string _Detail = this.Detail;
-				return this.SlotItem.Name + (this.Level > 0 ? " +" + this.Level : "") + (_Detail != "" ? "\n" + _Detail : "");
+				return this.SlotItem.Name + (this.Level >= 10 ? " max" : this.Level >= 1 ? (" ★+" + this.Level) : "") + (_Detail != "" ? "\n" + _Detail : "");
 			}
 		}
 
