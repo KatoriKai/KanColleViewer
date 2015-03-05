@@ -58,10 +58,12 @@
 								   MinWidth="60" Style="{DynamicResource DefaultTextStyleKey}" />
 						<TextBlock Text="{Binding Source={x:Static models:ResourceService.Current}, Path=Resources.Fleets_AirSuperiorityPotential, StringFormat='{}{0}: '}" Style="{DynamicResource DefaultTextStyleKey}" />
 						<TextBlock Text="{Binding AirSuperiorityPotential}"
-								   MinWidth="60" Style="{DynamicResource DefaultTextStyleKey}" />
+								   MinWidth="50" Style="{DynamicResource DefaultTextStyleKey}" />
 						<TextBlock Text="{Binding Speed}"
-								   MinWidth="60" Style="{DynamicResource DefaultTextStyleKey}" />
-					</StackPanel>
+								   MinWidth="90" Style="{DynamicResource DefaultTextStyleKey}" />
+                        <TextBlock Text="ドロップ:" Style="{DynamicResource DefaultTextStyleKey}"/>
+                        <TextBlock Text="{Binding LatestDropShip}" Style="{DynamicResource DefaultTextStyleKey}" />
+                    </StackPanel>
 				</DataTemplate>
 				<DataTemplate DataType="{x:Type vmFleets:FleetsViewModel}">
 					<StackPanel Orientation="Horizontal"
@@ -91,9 +93,11 @@
 								   MinWidth="60" Style="{DynamicResource DefaultTextStyleKey}" />
 						<TextBlock Text="{Binding Source={x:Static models:ResourceService.Current}, Path=Resources.Fleets_AirSuperiorityPotential, StringFormat='{}{0}: '}" Style="{DynamicResource DefaultTextStyleKey}" />
 						<TextBlock Text="{Binding AirSuperiorityPotential}"
-								   MinWidth="60" Style="{DynamicResource DefaultTextStyleKey}" />
+								   MinWidth="50" Style="{DynamicResource DefaultTextStyleKey}" />
 						<TextBlock Text="{Binding Speed}"
-								   MinWidth="60" Style="{DynamicResource DefaultTextStyleKey}" />
+								   MinWidth="90" Style="{DynamicResource DefaultTextStyleKey}" />
+                        <TextBlock Text="ドロップ:" Style="{DynamicResource DefaultTextStyleKey}"/>
+                        <TextBlock Text="{Binding LatestDropShip}" Style="{DynamicResource DefaultTextStyleKey}" />
 					</StackPanel>
 				</DataTemplate>
 				<DataTemplate DataType="{x:Type vmContents:ShipyardViewModel}" />
