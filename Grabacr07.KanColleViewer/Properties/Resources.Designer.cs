@@ -1132,8 +1132,7 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   查找类似 This works with DMM.com. OSAPI, and API links now!
-        ///[You must reload the game for the changes to take affect.] 的本地化字符串。
+        ///   查找类似 変更するために再起動が必要。 的本地化字符串。
         /// </summary>
         public static string Settings_Flash_Message {
             get {
@@ -1142,7 +1141,7 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   查找类似 Set Flash Quality: 的本地化字符串。
+        ///   查找类似 Flash 品质: 的本地化字符串。
         /// </summary>
         public static string Settings_Flash_Quality {
             get {
@@ -1165,7 +1164,7 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   查找类似 Set Flash Window: 的本地化字符串。
+        ///   查找类似 Flash 模式: 的本地化字符串。
         /// </summary>
         public static string Settings_Flash_Window {
             get {

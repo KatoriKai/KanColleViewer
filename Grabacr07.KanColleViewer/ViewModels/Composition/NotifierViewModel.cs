@@ -35,7 +35,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Composition
 
 		public void Test()
 		{
-            this.Plugin.Show(NotifyType.Other, "Test", "This is test notification", App.ViewModelRoot.Activate, ex => this.ErrorMessage = ex.Message);
+            this.Plugin.Show(NotifyType.Other, Properties.Resources.Debug_NotificationMessage_Title, Properties.Resources.Debug_NotificationMessage, App.ViewModelRoot.Activate, ex => this.ErrorMessage = ex.Message);
 		}
 	}
 }

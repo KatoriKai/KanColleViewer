@@ -44,7 +44,7 @@ namespace Grabacr07.KanColleViewer.ViewModels.Catalogs
 					string AddDetail = "";
 
 					foreach (ShipSlot s in this.Ship.EquippedSlots) {
-                        AddDetail += String.Format("{0}{1}\n", s.Item.Info.Name, s.Item.Level  >= 10 ? " max" : s.Item.Level >= 1 ? (" ★+" + s.Item.Level) : "");
+                        AddDetail += String.Format("{0}{1}\n", s.Item.Info.Name, s.Item.Level >= 10 ? " ★max" : s.Item.Level >= 1 ? (" ★+" + s.Item.Level) : "");
                         //AddDetail += String.Format("{0}{1}\n", s.Item.Info.Name, s.Item.Level > 0 ? " ★+" + s.Item.Level : "");
 					}
 

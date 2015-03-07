@@ -80,7 +80,7 @@ namespace Grabacr07.KanColleWrapper
 
 		public string ViewRangeCalcType
 		{
-			get { return this._ViewRangeCalcType ?? (this._ViewRangeCalcType = new ViewRangeType1().Id); }
+			get { return this._ViewRangeCalcType ?? (this._ViewRangeCalcType = new ViewRangeType2().Id); }
 			set
 			{
 				if (this._ViewRangeCalcType != value)

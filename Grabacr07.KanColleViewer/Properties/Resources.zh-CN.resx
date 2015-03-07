@@ -459,4 +459,32 @@
   <data name="ZoomAction_ZoomFailed" xml:space="preserve">
     <value>缩放失败: {0}</value>
   </data>
+  <data name="Settings_Browser_ZoomDescription" xml:space="preserve">
+    <value>你可以在窗口的顶部，使用缩放按钮改变游戏（Internet Explorer）画面的显示尺寸。截图不受此设置影响，总是使用100％的比例。</value>
+  </data>
+  <data name="Settings_Flash_Quality_ToolTip" xml:space="preserve">
+    <value>Best: 最好的效果
+High: 默认。
+Auto-High: 画质为主自动调整。
+Medium: 均衡
+AutoLow: 性能为主自动调整。
+Low: 性能优先</value>
+  </data>
+  <data name="Settings_Flash_Window_ToolTip" xml:space="preserve">
+    <value>Opaque: 标准模式
+Direct: 硬件加速
+GPU: 平板模式</value>
+  </data>
+  <data name="Settings_Network_Proxy_Auth_Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="Settings_Network_Proxy_Auth_Required" xml:space="preserve">
+    <value>使用代理服务器的用户名和密码</value>
+  </data>
+  <data name="Settings_Network_Proxy_Auth_Username" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>插件</value>
+  </data>
 </root>

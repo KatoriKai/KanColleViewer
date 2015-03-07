@@ -21,6 +21,11 @@ namespace Grabacr07.KanColleViewer.ViewModels.Contents
 			this.Info = SlotItem.Info;
 		}
 
+        public string LevelText
+        {
+            get { return this.SlotItem.Level >= 10 ? "max" : this.SlotItem.Level >= 1 ? ("★+" + this.SlotItem.Level) : ""; }
+        }
+
 		public string DetailedToolTip
 		{
 			get

@@ -390,25 +390,31 @@
                                         </ItemsControl.Template>
                                         <ItemsControl.ItemTemplate>
                                             <DataTemplate>
-                                                    <Border ToolTip="{Binding DetailedToolTip}"
+                                                <Grid ToolTip="{Binding DetailedToolTip}"
 														Background="Transparent">
-													<controls:SlotItemIcon x:Name="SlotItem"
-																		   Type="{Binding Info.IconType}"																		   
+                                                    <controls:SlotItemIcon Type="{Binding Info.IconType}"
 																		   Margin="3,0" />
-                                                    </Border>
+                                                    <TextBlock 
+														x:Name="ItemLevelBlock"
+														Foreground="#FF45A9A5" Background="#33000000" 
+														Text="{Binding LevelText}" 
+														FontSize="11"
+														VerticalAlignment="Bottom" 
+														HorizontalAlignment="Right" 
+														Panel.ZIndex="1" 
+														Width="Auto" 
+														Height="Auto"
+														Padding="1"/>
+                                                </Grid>
                                                 <DataTemplate.Triggers>
-                                                    <DataTrigger Binding="{Binding Source={x:Static models:Settings.Current}, Path=Orientation}" Value="Vertical">
-                                                        <Setter TargetName="SlotItem"
-											                Property="Margin"
-											                Value="3,0" />
-                                                    </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Source={x:Static models:Settings.Current}, Path=Orientation}" Value="Horizontal">
-                                                        <Setter TargetName="SlotItem"
-											                Property="Margin"
-											                Value="0,0" />
+                                                    <DataTrigger Binding="{Binding LevelText}"
+															 Value="">
+                                                        <Setter TargetName="ItemLevelBlock"
+														Property="Visibility"
+														Value="Collapsed" />
                                                     </DataTrigger>
                                                 </DataTemplate.Triggers>
-                                                </DataTemplate>
+                                            </DataTemplate>
                                         </ItemsControl.ItemTemplate>
                                     </ItemsControl>
                                 </Grid>

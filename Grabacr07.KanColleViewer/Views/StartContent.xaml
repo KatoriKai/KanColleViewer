@@ -182,14 +182,14 @@
 									 Foreground="{DynamicResource ActiveForegroundBrushKey}" />
                                 </TextBlock>
 
-                                <metro2:CallMethodButton Content="{Binding Resources.Settings_Updates_GetKCVBtn, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
+                                <!--<metro2:CallMethodButton Content="{Binding Resources.Settings_Updates_GetKCVBtn, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 													 ToolTip="{Binding Resources.Settings_Updates_GetKCVBtn_ToolTip, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 													 MethodName="GetLatestKCV"
 													 Visibility="{Binding IsUpdateAvailable, Converter={StaticResource BooleanToVsibilityConverterKey}}"
 													 HorizontalAlignment="Center"
 													 Padding="30,5"
 													 Margin="0,12,0,0"
-													 SnapsToDevicePixels="True" />
+													 SnapsToDevicePixels="True" /> -->
 
                                 <Rectangle Height="1"
 									   Margin="0,12"
@@ -336,7 +336,7 @@
                             </Border>
                         </Grid>
                     </TabItem>
-                    <TabItem>
+                    <!--<TabItem>
                         <TabItem.Header>
                             <TextBlock Text="{Binding Resources.Settings_BrowserControl, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 										   Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type TabItem}}, Path=Foreground}"
@@ -345,7 +345,7 @@
                         </TabItem.Header>
 
                         <settings:Browser Margin="10,9" />
-                    </TabItem>
+                    </TabItem>-->
                     <TabItem>
                         <TabItem.Header>
                             <TextBlock Text="{Binding Resources.Settings_Window, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
@@ -397,7 +397,7 @@
                         <settings:Others Margin="10,9" />
                     </TabItem>
 
-                    <TabItem>
+                    <!--<TabItem>
                         <TabItem.Header>
                             <TextBlock Text="{Binding Resources.Settings_Updates, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 										   Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type TabItem}}, Path=Foreground}"
@@ -406,7 +406,7 @@
                         </TabItem.Header>
 
                         <settings:Updates Margin="10,9" />
-                    </TabItem>
+                    </TabItem>-->
                 </TabControl>
             </ScrollViewer>
         </ScrollViewer>
