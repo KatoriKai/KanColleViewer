@@ -463,12 +463,12 @@
     <value>你可以在窗口的顶部，使用缩放按钮改变游戏（Internet Explorer）画面的显示尺寸。截图不受此设置影响，总是使用100％的比例。</value>
   </data>
   <data name="Settings_Flash_Quality_ToolTip" xml:space="preserve">
-    <value>Best: 最好的效果
-High: 默认。
-Auto-High: 画质为主自动调整。
+    <value>Best: 最好
+High: 高（默认）
+Auto-High: 自动高
 Medium: 均衡
-AutoLow: 性能为主自动调整。
-Low: 性能优先</value>
+AutoLow: 自动低
+Low: 低</value>
   </data>
   <data name="Settings_Flash_Window_ToolTip" xml:space="preserve">
     <value>Opaque: 标准模式
@@ -486,5 +486,11 @@ GPU: 平板模式</value>
   </data>
   <data name="Tools" xml:space="preserve">
     <value>插件</value>
+  </data>
+  <data name="Settings_Browser_ResetZoomDescription" xml:space="preserve">
+    <value>(错误缩放时使用)</value>
+  </data>
+  <data name="Settings_Notifications_NotificationPlugin" xml:space="preserve">
+    <value>通知设置</value>
   </data>
 </root>

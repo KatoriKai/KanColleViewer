@@ -98,7 +98,7 @@
 
 
 
-		<Rectangle Height="1"
+		<!--<Rectangle Height="1"
 				   Margin="0,5"
 				   Style="{DynamicResource SeparatorRectangleStyleKey}" />
 		<TextBlock Text="{Binding Resources.Settings_CustomSound, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" Style="{DynamicResource SettingsHeaderTextStyleKey}" />
@@ -119,7 +119,7 @@
 								  IsReadOnly="True"
 								  MinWidth="50"
 								  Grid.Column="1"/>
-		</Grid>
+		</Grid>-->
 
         <Rectangle Height="1"
 				   Margin="0,5"
