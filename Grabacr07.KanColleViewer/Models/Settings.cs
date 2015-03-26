@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Grabacr07.KanColleViewer.Models.Data.Xml;
 using Grabacr07.KanColleWrapper;
-using Grabacr07.KanColleWrapper.Models;
 using Livet;
 
 namespace Grabacr07.KanColleViewer.Models
@@ -26,6 +25,10 @@ namespace Grabacr07.KanColleViewer.Models
 		private static readonly string CurrentSettingsVersion = "1.10";
 
 		public static Settings Current { get; set; }
+
+        public delegate void EventHandler();
+        public event EventHandler VerticalWindow;
+        public event EventHandler HorizontalWindow;
 
 		public static void Load()
 		{
@@ -958,6 +961,9 @@ namespace Grabacr07.KanColleViewer.Models
                 if (this._Orientation != value)
                 {
                     this._Orientation = value;
+                    if (this._Orientation == OrientationType.Vertical)
+                        this.VerticalWindow();
+                    else this.HorizontalWindow();
                     this.RaisePropertyChanged();
                 }
             }
