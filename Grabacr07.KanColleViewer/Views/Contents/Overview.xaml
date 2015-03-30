@@ -331,35 +331,35 @@
                                             </TextBlock>
                                             <DataTemplate.Triggers>
                                                 <DataTrigger Binding="{Binding Source={x:Static models:Settings.Current}, Path=CanDisplayBuildingShipName}"
-												 Value="False">
+                                                             Value="False">
                                                     <Setter TargetName="ShipName"
-												Property="Text"
-												Value="???" />
+                                                            Property="Text"
+                                                            Value="???" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding State}"
-												 Value="Locked">
+                                                             Value="Locked">
                                                     <Setter TargetName="Remaining"
-												Property="Text"
-												Value="{Binding Resources.Dockyard_Locked, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+                                                            Property="Text"
+                                                            Value="{Binding Resources.Dockyard_Locked, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
                                                     <Setter TargetName="ShipName"
-												Property="Text"
-												Value="" />
+                                                            Property="Text"
+                                                            Value="" />
 													<Setter Property="Visibility" Value="Collapsed" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding State}"
-												 Value="Unlocked">
+                                                             Value="Unlocked">
                                                     <Setter TargetName="Remaining"
-												Property="Text"
-												Value="{Binding Resources.Dockyard_Unused, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+                                                            Property="Text"
+                                                            Value="{Binding Resources.Dockyard_Unused, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
                                                     <Setter TargetName="ShipName"
-												Property="Text"
-												Value="" />
+                                                            Property="Text"
+                                                            Value="" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding State}"
-												 Value="Completed">
+                                                             Value="Completed">
                                                     <Setter TargetName="Remaining"
-												Property="Text"
-												Value="{Binding Resources.Dockyard_Complete, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
+                                                            Property="Text"
+                                                            Value="{Binding Resources.Dockyard_Complete, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" />
                                                 </DataTrigger>
                                             </DataTemplate.Triggers>
                                         </DataTemplate>

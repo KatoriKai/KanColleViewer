@@ -960,6 +960,7 @@
                                                                             </Style>
                                                                         </TextBlock.Style>
                                                                 </TextBlock>
+                                                                <!--舰载数-->
                                                                 <TextBlock Visibility="{Binding Slot.Item.Info.IsNumerable, Converter={StaticResource BooleanToVisibilityConverter}}">
                                                                     <Run Text="[" />
                                                                     <Run Text="{Binding Slot.Current}" />
@@ -969,7 +970,7 @@
                                                                 </TextBlock>
                                                             </TextBlock>
                                                                 <TextBlock Text="{Binding Detail, Mode=OneWay}"
-                                                                       Visibility="{Binding IsHasDetail, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                                                           Visibility="{Binding IsHasDetail, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                                             </StackPanel>
                                                         </Border.ToolTip>
                                                         <Viewbox>
