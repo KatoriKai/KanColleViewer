@@ -12,6 +12,7 @@ using Grabacr07.KanColleViewer.ViewModels.Messages;
 using Grabacr07.KanColleViewer.Views;
 using Grabacr07.KanColleWrapper;
 using Livet;
+using Microsoft.Win32;
 using MetroRadiance;
 using AppSettings = Grabacr07.KanColleViewer.Properties.Settings;
 using Settings = Grabacr07.KanColleViewer.Models.Settings;
@@ -82,7 +83,34 @@ namespace Grabacr07.KanColleViewer
 			this.MainWindow.Show();
 
             RestoreWindowSize();
+
+            // Check if Adobe Flash is installed in Microsoft Explorer
+            //https://github.com/Yuubari/KanColleViewer/commit/d94a2c215122e4d03bf458f2a060b3a06f3c6599
+            if (GetFlashVersion() == "")
+            {
+                MessageBoxResult MB = MessageBox.Show(KanColleViewer.Properties.Resources.System_Flash_Not_Installed_Text, KanColleViewer.Properties.Resources.System_Flash_Not_Installed_Caption, MessageBoxButton.YesNo, MessageBoxImage.Error, MessageBoxResult.Yes);
+                if (MB == MessageBoxResult.Yes)
+                {
+                    Process.Start("IExplore.exe", @"http://get.adobe.com/flashplayer/");
+                    this.MainWindow.Close();
+                }
+            }
 		}
+
+        /// <summary>
+        /// Obtains Adobe Flash Player's ActiveX element version.
+        /// </summary>
+        /// <returns>Empty string if Flash is not installed, otherwise the currently installed version.</returns>
+        private static string GetFlashVersion()
+        {
+            string sVersion = "";
+            RegistryKey FlashRK = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Macromedia\FlashPlayerActiveX");
+            if (FlashRK != null)
+            {
+                sVersion = FlashRK.GetValue("Version", "").ToString();
+            }
+            return sVersion;
+        }
 
 		protected override void OnExit(ExitEventArgs e)
 		{
