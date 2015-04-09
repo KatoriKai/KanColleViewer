@@ -565,11 +565,38 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
+        ///   查找类似 弾薬: 的本地化字符串。
+        /// </summary>
+        public static string Homeport_Ammunition {
+            get {
+                return ResourceManager.GetString("Homeport_Ammunition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 ボーキ: 的本地化字符串。
+        /// </summary>
+        public static string Homeport_Bauxite {
+            get {
+                return ResourceManager.GetString("Homeport_Bauxite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 司令部 的本地化字符串。
         /// </summary>
         public static string Homeport_FleetHQ {
             get {
                 return ResourceManager.GetString("Homeport_FleetHQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 燃料: 的本地化字符串。
+        /// </summary>
+        public static string Homeport_Fuel {
+            get {
+                return ResourceManager.GetString("Homeport_Fuel", resourceCulture);
             }
         }
         
@@ -615,6 +642,15 @@ namespace Grabacr07.KanColleViewer.Properties {
         public static string Homeport_NoOfShips {
             get {
                 return ResourceManager.GetString("Homeport_NoOfShips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 鋼材: 的本地化字符串。
+        /// </summary>
+        public static string Homeport_Steel {
+            get {
+                return ResourceManager.GetString("Homeport_Steel", resourceCulture);
             }
         }
         

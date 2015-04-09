@@ -493,4 +493,10 @@ GPU: 平板模式</value>
   <data name="ZoomAction_ZoomFailed" xml:space="preserve">
     <value>缩放失败: {0}</value>
   </data>
+  <data name="Homeport_Fuel" xml:space="preserve">
+    <value>燃料:</value>
+  </data>
+  <data name="Settings_Updates" xml:space="preserve">
+    <value>更新</value>
+  </data>
 </root>

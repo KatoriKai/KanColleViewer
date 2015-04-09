@@ -1236,4 +1236,16 @@ Low: Performance over quality. Ugliest setting.</value>
   <data name="System_Flash_Not_Installed_Text" xml:space="preserve">
     <value>Internet Explorer用のAdobe FlashはKanColleViewerによって必要とされている！しかしインストールされていません。あなたは今それをダウンロードしてインストールしますか？</value>
   </data>
+  <data name="Homeport_Ammunition" xml:space="preserve">
+    <value>弾薬:</value>
+  </data>
+  <data name="Homeport_Bauxite" xml:space="preserve">
+    <value>ボーキ:</value>
+  </data>
+  <data name="Homeport_Fuel" xml:space="preserve">
+    <value>燃料:</value>
+  </data>
+  <data name="Homeport_Steel" xml:space="preserve">
+    <value>鋼材:</value>
+  </data>
 </root>
