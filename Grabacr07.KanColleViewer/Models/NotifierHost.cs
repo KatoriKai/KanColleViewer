@@ -121,18 +121,6 @@ namespace Grabacr07.KanColleViewer.Models
 							() => App.ViewModelRoot.Activate());
 					}
 				};
-
-                fleet.State.HeavilyDamaged += (sender, args) =>
-                    {
-                        if (Settings.Current.NotifyCritical)
-                        {
-                            PluginHost.Instance.GetNotifier().Show(
-                                NotifyType.Wounded,
-                                Resources.Notifications_CriticalCondition_Title,
-                                string.Format(Resources.Notifications_CriticalCondition, args.FleetName),
-                                () => App.ViewModelRoot.Activate());
-                        }
-                    };
 			}
 		}
 	}

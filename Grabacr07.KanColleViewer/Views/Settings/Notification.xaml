@@ -26,14 +26,8 @@
 		<TextBlock Text="{Binding Resources.Settings_Notifications, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 				   Style="{DynamicResource SettingsHeaderTextStyleKey}" />
 
-		<StackPanel Margin="20,-5,0,10">
+        <StackPanel Margin="20,-5,0,10">
 
-
-
-            <CheckBox Content="{Binding Resources.Settings_Notifications_CriticalCondition, Source={x:Static models:ResourceService.Current}, Mode=OneWay}" 
-                      IsChecked="{Binding Source={x:Static models:Settings.Current}, Path=NotifyCritical}" 
-                      Margin="0,5" />
-            
             <CheckBox Content="{Binding Resources.Settings_Notifications_Construction_Enabled, Source={x:Static models:ResourceService.Current}, Mode=OneWay}"
 					  IsChecked="{Binding Source={x:Static models:Settings.Current}, Path=NotifyBuildingCompleted}"
 					  Margin="0,5" />

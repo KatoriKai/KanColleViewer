@@ -55,10 +55,10 @@ namespace Grabacr07.KanColleViewer.Models
 				ScreenshotImageFormat = SupportedImageFormat.Png,
 				CanDisplayBuildingShipName = false,
 				EnableLogging = false,
-				EnableTranslations = true,
-				EnableAddUntranslated = true,
-				EnableUpdateNotification = true,
-				EnableUpdateTransOnStart = true,
+                EnableTranslations = false,
+                EnableAddUntranslated = false,
+                EnableUpdateNotification = false,
+                EnableUpdateTransOnStart = false,
 				ShipCatalog_SaveFilters = false,
 				ShipCatalog_LevelFilter_Level2OrMore = true,
 				ShipCatalog_LockFilter_Locked = true,
@@ -69,7 +69,6 @@ namespace Grabacr07.KanColleViewer.Models
 				NotifyBuildingCompleted = true,
 				NotifyRepairingCompleted = true,
                 NotifyExpeditionReturned = true,
-                NotifyCritical = true,
 				FlashQuality = "High",
 				FlashWindow = "Opaque",
 				CustomSoundVolume = 50,
@@ -456,25 +455,6 @@ namespace Grabacr07.KanColleViewer.Models
 				}
 			}
 		}
-		#endregion
-
-        #region NotifyCritical 変更通知プロパティ
-
-        private bool _NotifyCritical;
-
-        public bool NotifyCritical
-		{
-            get { return this._NotifyCritical; }
-			set
-			{
-                if (this._NotifyCritical != value)
-				{
-                    this._NotifyCritical = value;
-					this.RaisePropertyChanged();
-				}
-			}
-		}
-
 		#endregion
 
 		#region EnableCriticalAccent 変更通知プロパティ
