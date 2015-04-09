@@ -593,23 +593,23 @@
     <value>Flash</value>
   </data>
   <data name="Settings_Flash_Quality" xml:space="preserve">
-    <value>Set Flash Quality:</value>
+    <value>Flash 品质:</value>
   </data>
   <data name="Settings_Flash_Window_ToolTip" xml:space="preserve">
-    <value>Opaque: Default (Old IE has no HW accel)
-Direct: Fastest rendering speed (HW accel)
-GPU: Slow! GPU optimization for tablets.</value>
+    <value>Opaque: 标准模式
+Direct: 硬件加速
+GPU: 平板模式</value>
   </data>
   <data name="Settings_Flash_Window" xml:space="preserve">
-    <value>Set Flash Window:</value>
+    <value>Flash モード:</value>
   </data>
   <data name="Settings_Flash_Quality_ToolTip" xml:space="preserve">
-    <value>Best: Anti-Aliasing enabled on all images (Slowest)
-High: Default.
-Auto-High: Automatically lowers quality when needed.
-Medium: Average Performance
-AutoLow: Will emphasize speed when needed
-Low: Performance over quality. Ugliest setting.</value>
+    <value>Best:最好
+High: 默认
+Auto-High: 自动高
+Medium: 均衡
+AutoLow: 自动低
+Low: 低</value>
   </data>
   <data name="Settings_Updates_GetKCVBtn" xml:space="preserve">
     <value>配布サイトに行く</value>
@@ -624,8 +624,7 @@ Low: Performance over quality. Ugliest setting.</value>
     <value>ボリューム</value>
   </data>
   <data name="Settings_Flash_Message" xml:space="preserve">
-    <value>This works with DMM.com. OSAPI, and API links now!
-[You must reload the game for the changes to take affect.]</value>
+    <value>※変更するためには再起動が必要です。</value>
   </data>
   <data name="Ship_RepairDockToolTip" xml:space="preserve">
     <value>入渠: {0}</value>

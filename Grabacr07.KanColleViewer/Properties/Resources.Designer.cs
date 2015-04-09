@@ -1339,8 +1339,7 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   查找类似 This works with DMM.com. OSAPI, and API links now!
-        ///[You must reload the game for the changes to take affect.] 的本地化字符串。
+        ///   查找类似 ※変更するためには再起動が必要です。 的本地化字符串。
         /// </summary>
         public static string Settings_Flash_Message {
             get {
@@ -1349,7 +1348,7 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   查找类似 Set Flash Quality: 的本地化字符串。
+        ///   查找类似 Flash 品质: 的本地化字符串。
         /// </summary>
         public static string Settings_Flash_Quality {
             get {
@@ -1358,12 +1357,12 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   查找类似 Best: Anti-Aliasing enabled on all images (Slowest)
-        ///High: Default.
-        ///Auto-High: Automatically lowers quality when needed.
-        ///Medium: Average Performance
-        ///AutoLow: Will emphasize speed when needed
-        ///Low: Performance over quality. Ugliest setting. 的本地化字符串。
+        ///   查找类似 Best:最好
+        ///High: 默认
+        ///Auto-High: 自动高
+        ///Medium: 均衡
+        ///AutoLow: 自动低
+        ///Low: 低 的本地化字符串。
         /// </summary>
         public static string Settings_Flash_Quality_ToolTip {
             get {
@@ -1372,7 +1371,7 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   查找类似 Set Flash Window: 的本地化字符串。
+        ///   查找类似 Flash モード: 的本地化字符串。
         /// </summary>
         public static string Settings_Flash_Window {
             get {
@@ -1381,9 +1380,9 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   查找类似 Opaque: Default (Old IE has no HW accel)
-        ///Direct: Fastest rendering speed (HW accel)
-        ///GPU: Slow! GPU optimization for tablets. 的本地化字符串。
+        ///   查找类似 Opaque: 标准模式
+        ///Direct: 硬件加速
+        ///GPU: 平板模式 的本地化字符串。
         /// </summary>
         public static string Settings_Flash_Window_ToolTip {
             get {

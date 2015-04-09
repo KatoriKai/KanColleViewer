@@ -160,13 +160,11 @@
 
 			<Grid Grid.Column="2"
 				  Grid.RowSpan="2">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto" />
-					<ColumnDefinition />
-				</Grid.ColumnDefinitions>
-				<TextBlock Grid.Column="1"
-						   Text="※"/>
-				<TextBlock Grid.Column="2"
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="1"
 						   TextWrapping="Wrap"
 						   Padding="10"
 						   Margin="8,0,10,0"
