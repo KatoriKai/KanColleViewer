@@ -1304,4 +1304,19 @@ Low: Performance over quality. Ugliest setting.</value>
   <data name="System_Flash_Not_Installed_Text" xml:space="preserve">
     <value>Adobe Flash for Microsoft Internet Explorer is required by KCV! but is not installed. Would you like to download and install it now?</value>
   </data>
+  <data name="Homeport_Ammunition" xml:space="preserve">
+    <value>Ammunition:</value>
+  </data>
+  <data name="Homeport_Bauxite" xml:space="preserve">
+    <value>Bauxite:</value>
+  </data>
+  <data name="Homeport_DevelopmentMaterial" xml:space="preserve">
+    <value>Develop Material:</value>
+  </data>
+  <data name="Homeport_Fuel" xml:space="preserve">
+    <value>Fuel:</value>
+  </data>
+  <data name="Homeport_Steel" xml:space="preserve">
+    <value>Steel:</value>
+  </data>
 </root>
