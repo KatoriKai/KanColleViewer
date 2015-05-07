@@ -2660,20 +2660,29 @@ namespace Grabacr07.KanColleViewer.Properties {
         }
         
         /// <summary>
-        ///   查找类似 AL 作戦 的本地化字符串。
+        ///   查找类似 通商破壊 的本地化字符串。
         /// </summary>
-        public static string ShipCatalog_SortieWaters_AL {
+        public static string ShipCatalog_SortieWaters_1 {
             get {
-                return ResourceManager.GetString("ShipCatalog_SortieWaters_AL", resourceCulture);
+                return ResourceManager.GetString("ShipCatalog_SortieWaters_1", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   查找类似 MI 作戦 的本地化字符串。
+        ///   查找类似 攻略作戦 的本地化字符串。
         /// </summary>
-        public static string ShipCatalog_SortieWaters_MI {
+        public static string ShipCatalog_SortieWaters_2 {
             get {
-                return ResourceManager.GetString("ShipCatalog_SortieWaters_MI", resourceCulture);
+                return ResourceManager.GetString("ShipCatalog_SortieWaters_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似  的本地化字符串。
+        /// </summary>
+        public static string ShipCatalog_SortieWaters_3 {
+            get {
+                return ResourceManager.GetString("ShipCatalog_SortieWaters_3", resourceCulture);
             }
         }
         

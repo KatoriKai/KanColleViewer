@@ -782,11 +782,11 @@ Low: 低</value>
   <data name="ShipCatalog_SortieWaters" xml:space="preserve">
     <value>出撃海域</value>
   </data>
-  <data name="ShipCatalog_SortieWaters_AL" xml:space="preserve">
-    <value>AL 作戦</value>
+  <data name="ShipCatalog_SortieWaters_1" xml:space="preserve">
+    <value>通商破壊</value>
   </data>
-  <data name="ShipCatalog_SortieWaters_MI" xml:space="preserve">
-    <value>MI 作戦</value>
+  <data name="ShipCatalog_SortieWaters_2" xml:space="preserve">
+    <value>攻略作戦</value>
   </data>
   <data name="ShipCatalog_Operation_AL" xml:space="preserve">
     <value>AL 作戦参加済み</value>
@@ -1249,5 +1249,8 @@ Low: 低</value>
   </data>
   <data name="Homeport_DevelopmentMaterial" xml:space="preserve">
     <value>開発資材:</value>
+  </data>
+  <data name="ShipCatalog_SortieWaters_3" xml:space="preserve">
+    <value>泊地攻撃</value>
   </data>
 </root>
